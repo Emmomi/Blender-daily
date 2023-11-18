@@ -32,6 +32,7 @@ jobs:
   
       - name: pull
         run: |
+          git checkout -b issue${{github.event.issue.id}} main
           git add Blender-diary.md
           git commit -a -m "add picture"
           git push https://github.com/Emmomi/Blender-daily.git
