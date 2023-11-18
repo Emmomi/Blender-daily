@@ -28,7 +28,7 @@ jobs:
         run: |
 
           image_data="${{github.event.issue.body}}"
-          python add.py ${{image_data}}
+          python add.py ${image_data}
   
       - name: pull
         run: |
