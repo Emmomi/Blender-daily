@@ -1,0 +1,38 @@
+name: Add-imaage
+
+on:
+  issues:
+    type:
+      -opened
+      -reopened
+
+
+jobs:
+  add-image:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2 
+
+      - name: Setup python 
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.12.0"
+          architecture: "x64"
+
+      - name: config
+        run: |
+          git config user.name "Emmomi"
+          git config user.email "63034349+Emmomi@users.noreply.github.com"
+
+      - name: run python
+        run: |
+
+          image_data="${{github.event.issue.body}}"
+          python add.py ${image_data}
+  
+      - name: pull
+        run: |
+          git add Blender-diary.md
+          git commit -a -m "add picture"
+          git push https://github.com/Emmomi/Blender-daily-github-action.git
+      
