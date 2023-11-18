@@ -34,5 +34,5 @@ jobs:
         run: |
           git add Blender-diary.md
           git commit -a -m "add picture"
-          git push https://github.com/Emmomi/Blender-daily-github-action.git
+          git push https://github.com/Emmomi/Blender-daily.git
       
