@@ -1,5 +1,5 @@
 # Blender-daily
-save Blender-CG-image by GitHub Action ^-^
+save Blender-CG-image by GitHub Action \^-^/
 
 ## usage
 1. issueに画像を貼り付けて出す
